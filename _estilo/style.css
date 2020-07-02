@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,21 +8,132 @@
     outline: none;
     font-weight: 300;
     box-sizing: border-box;
-    font-family: 'Mukta', sans-serif;
+    
 }
 
 body{
     background-color: rgb(45, 42, 61);
+    font-family: 'Mukta', sans-serif;
+
 }
 
 a{
     text-decoration: none;
 }
 
-ul{
-    list-style: none;
-}
-
 img{
     max-width: 100%;
+}
+
+/*CABEÇALHO*/
+
+
+.logo{
+    width: 56px;
+    height: 56px;
+    background: url(../_imagens/logo.png) center center/56px no-repeat;
+    font-size: 0;
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(31, 28, 47);
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.menu ul{
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li{
+    width: 150px;
+    float: left;
+}
+
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(31, 28, 47);
+    color: rgb(230, 230, 230);
+}
+
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu ul li:hover ul{
+    visibility: visible;
+}
+
+.menu a:hover{
+    background-color: rgb(167, 135, 241);
+    color: rgb(29, 29, 29);
+}
+
+.menu ul ul li{
+    float: none;
+    border-bottom: solid 2px rgb(55, 54, 63);
+}
+
+.menu ul ul li a{
+    background-color: rgb(49, 39, 68);
+}
+
+label[for="bt-menu"]{
+    padding: 5px;
+    background-color: rgb(31, 28, 47);
+    color: rgb(230, 230, 230);
+    font-family: "Arial";
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+#bt-menu{
+    display: none;
+}
+
+label[for="bt-menu"]{
+    display: none;
+}
+
+@media(max-width:800px){
+
+    label[for="bt-menu"]{
+        display: block;
+    }
+
+    #bt-menu:checked ~ .menu{
+        margin-left: 0;
+    }
+
+    .menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+
+    .menu ul li{
+        width: 100%;
+        float: none;
+    }
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
 }
