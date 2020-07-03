@@ -28,13 +28,6 @@ img{
 /*CABEÇALHO*/
 
 
-.logo{
-    width: 56px;
-    height: 56px;
-    background: url(../_imagens/logo.png) center center/56px no-repeat;
-    font-size: 0;
-}
-
 .menu{
     width: 100%;
     height: 50px;
@@ -109,6 +102,8 @@ label[for="bt-menu"]{
 
     label[for="bt-menu"]{
         display: block;
+        border-radius: 15%;
+        
     }
 
     #bt-menu:checked ~ .menu{
@@ -137,3 +132,5 @@ label[for="bt-menu"]{
         max-height: 200px;
     }
 }
+
+/*CONTEUDO*/
